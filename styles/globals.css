@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.card{
+  max-width: 20rem;
+}
