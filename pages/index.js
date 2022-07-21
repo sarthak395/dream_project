@@ -24,7 +24,7 @@ export default function Home() {
               <p>Pitch Your Idea Shart tank style or Read others'</p>
             </a>
           </Link>
-          <Link href="">
+          <Link href="/talent/music">
             <a className={styles.card}>
               <h2>Music - Inspirations &rarr;</h2>
               <p>Play with your skills and get the Peer group you require</p>

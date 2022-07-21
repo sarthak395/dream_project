@@ -12,11 +12,11 @@ const startup = (props) => {
           <small className="text-muted display-6">Wanna Contribute ??</small>
         </h2>
 
-        <div className="row">
+        <div className="row container">
           {/* To display data */}
           {startups.map((startup) => {
             return (
-              <div className="col-sm-3" key={startup.slug}>
+              <div className="col-sm-3 mb-5 me-1 ms-5" key={startup.slug}>
                 <div className="card h-100" >
                   {/* <h5 className="card-header">Featured</h5> */}
                   <div className="card-body d-flex flex-column">
