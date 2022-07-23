@@ -19,7 +19,7 @@ const Search = (props) => {
 
         <div>
             {/* To collect data */}
-            <form className="d-flex" action={`/?searchterm=${searchterm}`} method='post'>
+            <form className="d-flex" action={`/searchpage?searchterm=${searchterm}`} method='post'>
                 <input name="searchterm" className="form-control me-2" type="search" value={searchterm} onChange={change} aria-label="Search" />
                 <button className="btn btn-outline-success" type="submit">Search</button>
             </form>

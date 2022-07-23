@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Search from '../../components/Search'
 
 const startup = (props) => {
   const [startups, setstartups] = useState(props.myprops)
 
   return (
     <main className="d-flex flex-column min-vh-100">
+      <Search props={{}} />
       <div className="container mb-5">
 
         <h2 className="display-4 mb-4"> Some Already Published Innovations {' '}

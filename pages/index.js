@@ -14,9 +14,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav>
-        <Search props={props} />
-      </nav>
+      <Search props={{}} />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -50,11 +48,4 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps(context) {
-  let data = await fetch(`http://localhost:3000/api/searchbackend?searchterm=${context.query.searchterm}`)
-  let myprops = await data.json()
 
-  return {
-    props: { myprops }, // will be passed to the page component as props
-  }
-}

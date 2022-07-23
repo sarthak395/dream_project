@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
+import Search from '../../components/Search'
 
 const music = (props) => {
 
@@ -17,6 +18,7 @@ const music = (props) => {
 
   return (
     <main className="d-flex flex-column min-vh-100">
+      <Search props={{}} />
       {/* we have to create 3 links to other pages , one as a lyricist , one as a instrumentialist and one as a producer based on what the user will select */}
       <div className="container mb-5">
 
