@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Search from '../components/Search'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home(props) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <nav>
+        <Search props={props} />
+      </nav>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -43,4 +48,13 @@ export default function Home() {
 
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  let data = await fetch(`http://localhost:3000/api/searchbackend?searchterm=${context.query.searchterm}`)
+  let myprops = await data.json()
+
+  return {
+    props: { myprops }, // will be passed to the page component as props
+  }
 }

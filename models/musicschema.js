@@ -10,5 +10,6 @@ const musicschema=new mongoose.Schema({
     type:String
 },{timestamps:true})
 
+musicschema.index({'$**':"text"})
 mongoose.models={} // to prevent overwritting error
 export default mongoose.model('Musicpeeps',musicschema);

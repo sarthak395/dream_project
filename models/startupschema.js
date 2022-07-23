@@ -8,5 +8,6 @@ const startupschema=new mongoose.Schema({
     slug:{type:String,unique:true}
 },{timestamps:true})
 
+startupschema.index({'$**':"text"})
 mongoose.models={} // to prevent overwritting error
 export default mongoose.model('Startups',startupschema);
