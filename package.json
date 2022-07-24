@@ -17,6 +17,7 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "18.2.0",
     "react-h5-audio-player": "^3.8.4",
+    "react-highlight-words": "^0.18.0",
     "react-instantsearch-dom": "^6.30.2",
     "react-instantsearch-hooks-web": "^6.30.2"
   },

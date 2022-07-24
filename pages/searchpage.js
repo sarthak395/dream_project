@@ -12,11 +12,12 @@ const searchpage = (props) => {
 }
 
 export async function getServerSideProps(context) {
+    console.log("fetching data for",context.query.searchterm)
     let data = await fetch(`http://localhost:3000/api/searchbackend?searchterm=${context.query.searchterm}`)
     let myprops = await data.json()
-  
+    
     return {
-      props: { myprops }, // will be passed to the page component as props
+      props: { myprops:myprops,searchterm:context.query.searchterm } // will be passed to the page component as props
     }
   }
 
