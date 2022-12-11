@@ -5,8 +5,21 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps,props }) {
+  useEffect(() => {
+    const threeScript = document.createElement("script")
+    threeScript.setAttribute("id","threescript")
+    threeScript.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js")
+    document.getElementsByTagName("head")[0].appendChild(threeScript)
+    return ()=>{
+      if(threeScript){
+        threeScript.remove()
+      }
+    }
+  }, [])
+  
   return (
     <div>
       <Navbar></Navbar>
